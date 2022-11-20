@@ -1,0 +1,192 @@
+<!doctype html> 
+ <html lang="en"> 
+   <head> 
+     <!-- Required meta tags --> 
+     <meta charset="utf-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+ 
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"> 
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+     <link rel="stylesheet" href="payment integration.css"> 
+     <link rel="data:image/jpeg;base64,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" alt=""width="500"height="200"> 
+     <title><i>RAISE A REASON!</i></title> 
+   </head> 
+  <body style="background-color:rgb(138, 175, 239);"> 
+ <nav class="navbar navbar-light"> 
+   <div class="container-fluid"> 
+     <img src="https://www.raisereasonproject.com/wp-content/uploads/2021/08/PicsArt_07-02-04.33.14-1-1-scaled.jpg" width="10"> 
+     <a class="navbar-brand" href="#">Raise Reason</a> 
+     <a class="navbar left" href="#ABOUT">About us</a> 
+     <a class="navbar left" href="#CONTACT">Contact us</a> 
+     <a class="navbar left" href="#DONATE">Why to donate?</a> 
+   </div> 
+ </nav> 
+     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"> 
+   <div class="carousel-indicators"> 
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button> 
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button> 
+     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button> 
+   </div> 
+   <div class="carousel-inner"> 
+    <div class="carousel-item active"> 
+      <img src="https://i.ytimg.com/vi/XvgQuyU5zKc/maxresdefault.jpg" width="100px" height="500px"class="d-block w-100" alt="..."> 
+     </div> 
+     <div class="carousel-item"> 
+       <img src="https://www.intrepidtravel.com/adventures/wp-content/uploads/2016/05/orphanage-tourism-hansel-regrettal.jpg"width="100px" height="500px" class="d-block w-100" alt="..."> 
+     </div> 
+    <div class="carousel-item"> 
+      <img src=https://www.karrass.com/pub/media/magefan_blog/c/h/changes.jpg "width="100px" height="500px" class="d-block w-100" alt="..."> 
+     </div> 
+   </div> 
+   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev"> 
+     <span class="carousel-control-prev-icon" aria-hidden="true"></span> 
+     <span class="visually-hidden">Previous</span> 
+   </button> 
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next"> 
+    <span class="carousel-control-next-icon" aria-hidden="true"></span> 
+    <span class="visually-hidden">Next</span> 
+   </button>     
+     </div> 
+ <br> 
+       <div class="about" id="about"> 
+         <h2 align="center">ABOUT US</h2> 
+           RAISE A REASON  Foundation is a youth led organization working on empowering the underprivileged section of our society. RAISE A REASON has a pan India presence through its wide network of Volunteer Chapters across the country. Our Foundation focused its interventions on issues concerning youth and children which brought about significant changes in their lives in terms of education, health, skill, career and sustainable livelihood. Y4D also works on Environment conservation, women empowerment, Food safety and security, . Being an organisation who cares for society,  gets engaged in projects as the situation demands under natural or manmade disasters, like COVID-19 Pandemic, Flood, Drought Relief etc. 
+         <div class="accordion accordion-flush" id="accordionFlushExample"> 
+  <div class="accordion-item"> 
+    <h2 class="accordion-header" id="flush-headingOne"> 
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne"> 
+         <b>MISSION</b> 
+      </button> 
+     </h2> 
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample"> 
+      <div class="accordion-body"><ul><li> Committed to empower the underprivileged section of our society by creating an enabling environment through Encouragement, Education and Employment so that citizens can harness their full potential and live happy and healthy lives with dignity and contribute positively to society.</li><li> Working towards shaping up a society which is sustainable for future generations by working on environment conservation and introducing values in society.</li></ul></div> 
+    </div> 
+  </div> 
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"> 
+       <b> VISION</b> 
+      </button> 
+   </h2> 
+     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample"> 
+       <div class="accordion-body"><ul> 
+           <li><b>Transparency:</b> ensures complete transparency in all our efforts and workings with Internal as well as external stakeholders of organisation.</li> 
+             <li><b>Respect:</b>  ensures respect towards each individual and their views and feelings inside out the organisation despite its cast, creed, gender or color.</li> 
+            <li><b>Integrity:</b> works with integrity and ensures the dignity of all those involved in our endeavors. To comply with all laws, rules and regulations bestowed upon as part of an organisation.</li> 
+             <li><b>Empathy:</b> To be empathetic to all those associated with Y4D and ensure a high sense of understanding of the feelings of all our stakeholders.</li></ul></div> 
+     </div> 
+          </div> 
+   <div class="accordion-item"> 
+     <h2 class="accordion-header" id="flush-headingThree"> 
+       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree"> 
+         <b> Goals</b> 
+       </button> 
+     </h2> 
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample"> 
+       <div class="accordion-body">  
+         <ul> 
+          <li>Empower Youth through encouragement, education and employment to build a strong and prosperous society.</li> 
+           <li>Work on various aspects impacting children to build an empowered future generation.</li> 
+ <li>Empowering Citizens to live with dignity and get equal rights for them in society. 
+    Creating a healthy, sustainable and Safe environment for citizens to live.</li></div> 
+     </div> 
+  </div> 
+ </div> 
+       </div> 
+     
+  
+    <br><hr> 
+     <div class="donate" id="donate"> 
+        <h2 align="center">WHY TO DONATE</h2> 
+           RAISE A REASON  Foundation is a youth led organization working on empowering the underprivileged section of our society. RAISE A REASON has a pan India presence through its wide network of Volunteer Chapters across the country. Our Foundation focused its interventions on issues concerning youth and children which brought about significant changes in their lives in terms of education, health, skill, career and sustainable livelihood, also works on Environment conservation, women empowerment, Food safety and security, . Being an organisation who cares for society,  gets engaged in projects as the situation demands under natural or manmade disasters, like COVID-19 Pandemic, Flood, Drought Relief etc. 
+      </div> 
+     <br> 
+      
+     <div class="alert alert-primary" role="alert" > 
+         <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Hvs1qoToma6oeO/view" data-text="Donate and help" data-color="#528FF0" data-size="large" align="center"> 
+   <script> 
+     (function(){ 
+       var d=document; var x=!d.getElementById('razorpay-embed-btn-js') 
+       if(x){ var s=d.createElement('script'); s.defer=!0;s.id='razorpay-embed-btn-js'; 
+       s.src='https://cdn.razorpay.com/static/embed_btn/bundle.js';d.body.appendChild(s);} else{var rzp=window['__rzp__']; 
+       rzp && rzp.init && rzp.init()}})(); 
+   </script> 
+ </div> 
+    
+ </div> 
+     
+<div class="container" id="contact"> 
+               <div class="row"> 
+                   <div class="col-sm-6 col-sm-offset-3"> 
+
+ 
+                        <form name="sentMessage" class="contact-form" align="center" method="post" novalidate> 
+                            <h3>Drop us a line</h3> 
+                           <div class="row">                                <div class="col-md-12"> 
+                                   <div class="row control-group"> 
+                                      <div class="form-group col-xs-12 controls"> 
+
+ 
+                                            <input type="text" class="form-control" placeholder="Name" id="name" required data-validation-required-message="Please enter your name."> 
+                                           <p class="help-block"></p> 
+                                        </div> 
+                                  </div> 
+
+ 
+                                </div> 
+ 
+ 
+                                <div class="col-md-12"> 
+                                    <div class="row control-group"> 
+                                        <div class="form-group col-xs-12 controls"> 
+
+ 
+                                            <input type="email" class="form-control" placeholder="Email Address" id="email" required data-validation-required-message="Please enter your email address."> 
+                                            <p class="help-block"></p> 
+                                        </div> 
+                                    </div>  
+                                </div> 
+                            </div> 
+                            <div class="row control-group"> 
+                                <div class="form-group col-xs-12  controls"> 
+
+ 
+                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number."> 
+                                    <p class="help-block"></p> 
+                              </div> 
+                            </div> 
+                            <div class="row control-group"> 
+                                 <div class="form-group col-xs-12 controls"> 
+ 
+ 
+                                    <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea> 
+                                    <p class="help-block"></p> 
+                                </div> 
+                            </div> 
+                             <br> 
+                             <div id="success"></div> 
+                            <div class="row"> 
+                                <div class="form-group col-xs-12 text-right"> 
+                                    <button type="button" class="btn btn-primary">Send Message</button> 
+                               </div> 
+                            </div> 
+                           
+                  
+                        </form> 
+                      
+ 
+ 
+                   </div> 
+                </div> 
+            </div> 
+        <hr> 
+  <footer class="footer"> 
+           <div class="container text-center"> 
+               <span class="alo">RAISE A REASON</span> 
+               <span class="copyright">&copy; Copyright 2021.<br></span> 
+           </div> 
+     </footer> 
+   
+ </body> 
+</html>
